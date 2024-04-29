@@ -207,45 +207,26 @@
                     var userLat = position.coords.latitude;
                     var userLon = position.coords.longitude;
 
-                    // document.querySelectorAll('[gps-entity-place]').forEach(function (entity) {
-                    //     var placeLat = entity.getAttribute('gps-entity-place').latitude;
-                    //     var placeLon = entity.getAttribute('gps-entity-place').longitude;
-                    //     var distance = getDistanceFromLatLonInKm(userLat, userLon, placeLat, placeLon).toFixed(2);
-
-                    //     var entityId = entity.getAttribute('id') + "-distance";
-                    //     var distanceEntity = document.getElementById(entityId);
-                    //     if (distanceEntity) {
-                    //         distanceEntity.setAttribute('value', ` ${distance} metre`);
-                    //         // distanceEntity.setAttribute('value', `Mesafe: ${distance} metre`);
-                    //     }
-
-                    //     var baseScale = 5;
-                    //     var scaleFactor = distance / 5;
-                    //     var newScale = baseScale + scaleFactor;
-                    //     newScale = Math.max(baseScale, newScale);
-
-                    //     entity.setAttribute('scale', `${newScale} ${newScale} ${newScale}`); 
- 
-                    // });
                     document.querySelectorAll('[gps-entity-place]').forEach(function (entity) {
-                    var placeLat = entity.getAttribute('gps-entity-place').latitude;
-                    var placeLon = entity.getAttribute('gps-entity-place').longitude;
-                    var distance = getDistanceFromLatLonInKm(userLat, userLon, placeLat, placeLon).toFixed(2);
+                        var placeLat = entity.getAttribute('gps-entity-place').latitude;
+                        var placeLon = entity.getAttribute('gps-entity-place').longitude;
+                        var distance = getDistanceFromLatLonInKm(userLat, userLon, placeLat, placeLon).toFixed(2);
 
-                    var entityId = entity.getAttribute('id') + "-distance";
-                    var distanceEntity = document.getElementById(entityId);
-                    if (distanceEntity) {
-                        distanceEntity.setAttribute('value', `${distance} metre`);
-                    }
+                        var entityId = entity.getAttribute('id') + "-distance";
+                        var distanceEntity = document.getElementById(entityId);
+                        if (distanceEntity) {
+                            distanceEntity.setAttribute('value', ` ${distance} metre`);
+                            // distanceEntity.setAttribute('value', `Mesafe: ${distance} metre`);
+                        }
 
-                    var baseScale = 5;
-                    var scaleFactor = distance / 100; // Adjust scaling factor as needed
-                    var newScale = Math.max(baseScale, baseScale + scaleFactor);
-                    entity.setAttribute('scale', `${newScale} ${newScale} ${newScale}`);
+                        var baseScale = 5;
+                        var scaleFactor = distance / 5;
+                        var newScale = baseScale + scaleFactor;
+                        newScale = Math.max(baseScale, newScale);
 
-                    var textHeight = newScale / 2 + 1; // Adjust text position relative to image scale
-                    distanceEntity.setAttribute('position', `0 ${textHeight} 0`);
-                });
+                        entity.setAttribute('scale', `${newScale} ${newScale} ${newScale}`); 
+ 
+                    });
                 }, function (err) {
                     console.warn('ERROR(' + err.code + '): ' + err.message);
                 }, {
