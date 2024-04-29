@@ -5,106 +5,106 @@
     <meta charset="utf-8">
     <title>Ports</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://ar-js-org.github.io/AR.js/aframe/build/aframe-ar.js"></script>    
-</head> 
+    <script src="https://ar-js-org.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+
 <body style="margin : 0px; overflow: hidden;">
     <a-scene id="scene" vr-mode-ui="enabled: false"
-        arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"> 
-            <!-- Uckuyular Üçkuyular 38.405675209865336, 27.06935935250486 -->
-            <a-image id="Uckuyular"
-                src="https://upload.wikimedia.org/wikipedia/commons/6/66/%C3%9C%C3%A7kuyular_Ferry_Terminal%2C_March_2021_%289%29.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.405675209865336; longitude:27.06935935250486;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Uckuyular" look-at="[gps-camera]" color="white" scale="5 5 5"
+        arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
+        <!-- Uckuyular Üçkuyular 38.405675209865336, 27.06935935250486 -->
+        <a-image id="Uckuyular"
+            src="https://upload.wikimedia.org/wikipedia/commons/6/66/%C3%9C%C3%A7kuyular_Ferry_Terminal%2C_March_2021_%289%29.jpg"
+            onclick="window.location.href='https://www.izdeniz.com.tr/'" look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 38.405675209865336; longitude:27.06935935250486;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <!-- <a-text value="Uckuyular" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 38.405675209865336; longitude: 27.06935935250486;" position="0 10 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Uckuyular-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.405675209865336; longitude:27.06935935250486;" position="0 -19 1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <a-text id="Uckuyular-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 38.405675209865336; longitude:27.06935935250486;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
 
-            <!-- 	  Goztepe Göztepe  	   38.399571991405416, 27.083436202065336 -->
-            <a-image id="Goztepe" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/G%C3%B6ztepe_pier.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.399571991405416; longitude: 27.083436202065336;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Goztepe" look-at="[gps-camera]" color="white" scale="5 5 5"
+        <!-- 	  Goztepe Göztepe  	   38.399571991405416, 27.083436202065336 -->
+        <a-image id="Goztepe" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/G%C3%B6ztepe_pier.jpg"
+            onclick="window.location.href='https://www.izdeniz.com.tr/'" look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 38.399571991405416; longitude: 27.083436202065336;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <!-- <a-text value="Goztepe" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 38.399571991405416; longitude: 27.083436202065336;" position="0 10 1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Goztepe-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.399571991405416; longitude: 27.083436202065336;" position="0 -19 1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <a-text id="Goztepe-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 38.399571991405416; longitude: 27.083436202065336;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <!-- 	 Karantina 38.40826637555396, 27.106606027145318  -->
-            <a-image id="Karantina"
-                src="https://upload.wikimedia.org/wikipedia/commons/2/29/Karantina_%C4%B0skelesi_%281%29.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.40826637555396; longitude: 27.106606027145318;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Karantina" look-at="[gps-camera]" color="white" scale="5 5 5"
+        <!-- 	 Karantina 38.40826637555396, 27.106606027145318  -->
+        <a-image id="Karantina"
+            src="https://upload.wikimedia.org/wikipedia/commons/2/29/Karantina_%C4%B0skelesi_%281%29.jpg"
+            onclick="window.location.href='https://www.izdeniz.com.tr/'" look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 38.40826637555396; longitude: 27.106606027145318;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <!-- <a-text value="Karantina" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 38.40826637555396; longitude: 27.106606027145318;" position="0 10 -1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Karantina-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.40826637555396; longitude: 27.106606027145318;" position="0 -19 -1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <a-text id="Karantina-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 38.40826637555396; longitude: 27.106606027145318;" position="0 -19 -1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <!-- 	   Konak	   38.418826366849444, 27.125208834874005 -->
-            <a-image id="Konak" src="https://upload.wikimedia.org/wikipedia/commons/4/46/Konak_Terminal.jpg"  onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.418826366849444; longitude: 27.125208834874005;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Konak" look-at="[gps-camera]" color="white" scale="5 5 5"
+        <!-- 	   Konak	   38.418826366849444, 27.125208834874005 -->
+        <a-image id="Konak" src="https://upload.wikimedia.org/wikipedia/commons/4/46/Konak_Terminal.jpg"
+            onclick="window.location.href='https://www.izdeniz.com.tr/'" look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 38.418826366849444; longitude: 27.125208834874005;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <!-- <a-text value="Konak" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 38.418826366849444; longitude: 27.125208834874005;" position="0 10 -1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Konak-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.418826366849444; longitude: 27.125208834874005;" position="0 -19 1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <a-text id="Konak-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 38.418826366849444; longitude: 27.125208834874005;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <!-- 	   Pasaport	   38.42892199253736, 27.13228407441726 -->
-            <a-image id="Pasaport"
-                src="https://upload.wikimedia.org/wikipedia/commons/5/55/Kantar_Karakolu%2C_Izmir.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.42892199253736; longitude: 27.13228407441726;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Pasaport" look-at="[gps-camera]" color="white" scale="5 5 5"
+        <!-- 	   Pasaport	   38.42892199253736, 27.13228407441726 -->
+        <a-image id="Pasaport" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Kantar_Karakolu%2C_Izmir.jpg"
+            onclick="window.location.href='https://www.izdeniz.com.tr/'" look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 38.42892199253736; longitude: 27.13228407441726;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <!-- <a-text value="Pasaport" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 38.42892199253736; longitude: 27.13228407441726;" position="0 10 -1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Pasaport-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.42892199253736; longitude: 27.13228407441726;" position="0 -19 -1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <a-text id="Pasaport-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 38.42892199253736; longitude: 27.13228407441726;" position="0 -19 -1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <!-- 	   Alsancak 	   38.43897576759363, 27.140762959439844 -->
-            <a-image id="Alsancak" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Alsancak_Pier.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.43897576759363; longitude: 27.140762959439844;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Alsancak" look-at="[gps-camera]" color="white" scale="5 5 5"
+        <!-- 	   Alsancak 	   38.43897576759363, 27.140762959439844 -->
+        <a-image id="Alsancak" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Alsancak_Pier.jpg"
+            onclick="window.location.href='https://www.izdeniz.com.tr/'" look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 38.43897576759363; longitude: 27.140762959439844;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <!-- <a-text value="Alsancak" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 38.43897576759363; longitude: 27.140762959439844;" position="0 10 -1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Alsancak-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.43897576759363; longitude: 27.140762959439844;" position="0 -19 1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <a-text id="Alsancak-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 38.43897576759363; longitude: 27.140762959439844;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <!-- 	Bostanli   Bostanlı 	   38.45202997017321, 27.09778594157115 -->
-            <a-image id="Bostanli"
-                src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Bostanl%C4%B1_Ferry_Terminal%2C_July_2020_%289%29.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.45202997017321; longitude: 27.09778594157115;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Bostanli" look-at="[gps-camera]" color="white" scale="5 5 5"
+        <!-- 	Bostanli   Bostanlı 	   38.45202997017321, 27.09778594157115 -->
+        <a-image id="Bostanli"
+            src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Bostanl%C4%B1_Ferry_Terminal%2C_July_2020_%289%29.jpg"
+            onclick="window.location.href='https://www.izdeniz.com.tr/'" look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 38.45202997017321; longitude: 27.09778594157115;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <!-- <a-text value="Bostanli" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 38.45202997017321; longitude: 27.09778594157115;" position="0 10 -1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Bostanli-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.45202997017321; longitude: 27.09778594157115;" position="0 -19 1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <a-text id="Bostanli-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 38.45202997017321; longitude: 27.09778594157115;" position="0 -19 1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <!-- 	 Karsiyaka  Karşıyaka 38.454830076318316, 27.12052045655903 -->
-            <a-image id="Karsiyaka"
-                src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Kar%C5%9F%C4%B1yaka_terminal.jpg" onclick="window.location.href='https://www.izdeniz.com.tr/'" 
-                look-at="[gps-camera]" scale="5 5 5"
-                gps-entity-place="latitude: 38.454830076318316; longitude: 27.12052045655903;" position="0 2 0"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
-            <!-- <a-text value="Karsiyaka" look-at="[gps-camera]" color="white" scale="5 5 5"
+        <!-- 	 Karsiyaka  Karşıyaka 38.454830076318316, 27.12052045655903 -->
+        <a-image id="Karsiyaka"
+            src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Kar%C5%9F%C4%B1yaka_terminal.jpg"
+            onclick="window.location.href='https://www.izdeniz.com.tr/'" look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 38.454830076318316; longitude: 27.12052045655903;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+        <!-- <a-text value="Karsiyaka" look-at="[gps-camera]" color="white" scale="5 5 5"
             gps-entity-place="latitude: 38.454830076318316; longitude: 27.12052045655903;" position="0 10 -1" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text> -->
-            <a-text id="Karsiyaka-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
-                gps-entity-place="latitude: 38.454830076318316; longitude: 27.12052045655903;" position="0 -19 -1"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+        <a-text id="Karsiyaka-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 38.454830076318316; longitude: 27.12052045655903;" position="0 -19 -1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
 
-            <a-camera gps-camera rotation-reader></a-camera>
+        <a-camera gps-camera rotation-reader></a-camera>
 
     </a-scene>
     <script>
@@ -151,61 +151,25 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var scene = document.querySelector('a-scene');
-
-
-            document.querySelectorAll('a-image').forEach(function (image) {
-                image.addEventListener('click', function () {
-                    // Redirect the user when an image is clicked
-                    window.location.href = 'https://www.izdeniz.com.tr/';
-                });
-            });
-
-            // image.addEventListener('mouseenter', function () {
-            //     image.setAttribute('scale', '5.5 5.5 5.5');  
-            // });
-            // image.addEventListener('mouseleave', function () {
-            //     image.setAttribute('scale', '5 5 5');  
-            // });
-
-
-            if (scene) {
-                scene.addEventListener('click', function () {
-                    // Select all entities with animation
-                    var animatedEntities = document.querySelectorAll('[animation]');
-
-                    animatedEntities.forEach(function (entity) {
-                        // Check if the animation is running and pause it
-                        if (entity.components.animation && entity.components.animation.isPlaying) {
-                            entity.components.animation.pause();
-                        } else {
-                            // If the animation is paused, this resumes it
-                            entity.components.animation.play();
-                        }
-                    });
-                });
-            }
-            function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
-                var R = 6371;
-                var dLat = deg2rad(lat2 - lat1);
-                var dLon = deg2rad(lon2 - lon1);
-                var a =
-                    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-                    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
-                    Math.sin(dLon / 2) * Math.sin(dLon / 2);
-                var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-                var d = R * c;
-                return d * 1000;
-            }
-
-            function deg2rad(deg) {
-                return deg * (Math.PI / 180);
-            }
-
-             
-
             setInterval(updateDistances, 1000);
         });
+
+        function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
+            var R = 6371;
+            var dLat = deg2rad(lat2 - lat1);
+            var dLon = deg2rad(lon2 - lon1);
+            var a =
+                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c * 1000;
+        }
+
+        function deg2rad(deg) {
+            return deg * (Math.PI / 180);
+        }
+
         function updateDistances() {
             navigator.geolocation.getCurrentPosition(function (position) {
                 var userLat = position.coords.latitude;
@@ -240,4 +204,5 @@
         }
     </script>
 </body>
+
 </html>
