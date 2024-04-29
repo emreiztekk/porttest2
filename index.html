@@ -1,23 +1,82 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="tr">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>AR.js</title>
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <meta charset="utf-8">
+    <title>AR View</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://ar-js-org.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
-
-<body>
+<body style="margin: 0px; overflow: hidden;">
     <a-scene id="scene" vr-mode-ui="enabled: false"
         arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
-        <a-entity gps-entity-place="latitude: 38.42892199253736; longitude: 327.13228407441726">
-            <a-box position="0 1 0" rotation="0 45 0" color="yellow" look-at="[gps-camera]"></a-box>
-        </a-entity>
+
+        <!-- Image at specified coordinates -->
+        <a-image id="image" src="https://raw.githubusercontent.com/Babatunde-Fatai/Babylon-Assets/main/textures/earth_atmos_tex.jpg"
+            look-at="[gps-camera]" scale="5 5 5"
+            gps-entity-place="latitude: 38.42892199253736; longitude: 27.13228407441726;" position="0 2 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-image>
+
+        <!-- Text below the image -->
+        <a-text id="image-distance" look-at="[gps-camera]" color="white" scale="5 5 5"
+            gps-entity-place="latitude: 38.42892199253736; longitude: 27.13228407441726;" position="0 -14 -1"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-text>
+
         <a-camera gps-camera rotation-reader></a-camera>
     </a-scene>
-</body>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            setInterval(updateDistances, 1000);
+        });
+
+        function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
+            var R = 6371;
+            var dLat = deg2rad(lat2 - lat1);
+            var dLon = deg2rad(lon2 - lon1);
+            var a =
+                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c * 1000;
+        }
+
+        function deg2rad(deg) {
+            return deg * (Math.PI / 180);
+        }
+
+        function updateDistances() {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var userLat = position.coords.latitude;
+                var userLon = position.coords.longitude;
+
+                document.querySelectorAll('[gps-entity-place]').forEach(function (entity) {
+                    var placeLat = entity.getAttribute('gps-entity-place').latitude;
+                    var placeLon = entity.getAttribute('gps-entity-place').longitude;
+                    var distance = getDistanceFromLatLonInKm(userLat, userLon, placeLat, placeLon).toFixed(2);
+
+                    var entityId = entity.getAttribute('id') + "-distance";
+                    var distanceEntity = document.getElementById(entityId);
+                    if (distanceEntity) {
+                        distanceEntity.setAttribute('value', `${distance} metre`);
+                    }
+
+                    var baseScale = 5;
+                    var scaleFactor = distance / 100; // Adjust scaling factor as needed
+                    var newScale = Math.max(baseScale, baseScale + scaleFactor);
+                    entity.setAttribute('scale', `${newScale} ${newScale} ${newScale}`);
+
+                    var textHeight = newScale / 2 + 1; // Adjust text position relative to image scale
+                    distanceEntity.setAttribute('position', `0 ${textHeight} 0`);
+                });
+            }, function (err) {
+                console.warn('ERROR(' + err.code + '): ' + err.message);
+            }, {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+            });
+        }
+    </script>
+</body>
 </html>
